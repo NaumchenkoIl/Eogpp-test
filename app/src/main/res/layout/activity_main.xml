@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient">
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,11 +11,14 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp">
 
             <TextView
                 android:layout_width="0dp"
@@ -22,13 +26,14 @@
                 android:layout_weight="1"
                 android:text="Наряды"
                 android:textSize="28sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#1B5E20" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="admin"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="#000000"
                 android:layout_marginEnd="8dp" />
@@ -50,181 +55,316 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnPickDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Выбрать дату" />
-
-        <TextView
-            android:id="@+id/tvSelectedDate"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="32.02.67"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="#000000" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/card_bg"
+            android:padding="12dp">
 
-        <TextView
+            <Button
+                android:id="@+id/btnPickDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#A11F8121"
+                android:textColor="#FFFFFF"
+                android:text="Выбрать дату" />
+
+            <TextView
+                android:id="@+id/tvSelectedDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="32.02.67"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Маршрут 001"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="#000000" />
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card_bg"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Всего машин на линии: 0"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#1B5E20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="ПЛАН"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="План на 32.02.67"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#1B5E20" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:background="#E8F5E9"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Маршрут"
+                        android:textStyle="bold"
+                        android:textColor="#1B5E20"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="План"
+                        android:textStyle="bold"
+                        android:textColor="#1B5E20"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Факт"
+                        android:textStyle="bold"
+                        android:textColor="#1B5E20"
+                        android:gravity="center" />
+                </TableRow>
+
+                <TableRow
+                    android:padding="10dp"
+                    android:background="#FAFAFA">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="001"
+                        android:gravity="center"
+                        android:textColor="#000000" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="5"
+                        android:gravity="center"
+                        android:textColor="#000000" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="3"
+                        android:gravity="center"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:padding="10dp"
+                    android:background="#FFFFFF">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="002"
+                        android:gravity="center"
+                        android:textColor="#000000" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="3"
+                        android:gravity="center"
+                        android:textColor="#000000" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:gravity="center"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Маршрут 001"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1B5E20"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                android:gravity="center"
+                android:background="@drawable/route_badge_bg" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#A1409944"
+                android:textColor="#FFFFFF"
+                android:text="Редактировать наряд" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="А001АА136"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/plate_bg"
+            android:elevation="2dp"
+            android:layout_marginStart="4dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
             android:text="А002АА136"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/plate_bg"
+            android:elevation="2dp"
+            android:layout_marginStart="4dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
             android:text="А003АА136"
-            android:textSize="16sp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Редактировать наряд" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Маршрут 002"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/plate_bg"
+            android:elevation="2dp"
+            android:layout_marginStart="4dp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Создать наряд" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Всего машин на линии: 0"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="#1B5E20" />
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="ПЛАН"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="#000000" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Машин на линии"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="#1B5E20" />
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:stretchColumns="*">
-
-            <TableRow
-                android:background="#DDDDDD"
-                android:padding="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="Маршрут"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Маршрут 002"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    android:gravity="center" />
+                    android:textColor="#1B5E20"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="6dp"
+                    android:gravity="center"
+                    android:background="@drawable/route_badge_bg" />
 
-                <TextView
+                <Space
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="План"
-                    android:textStyle="bold"
-                    android:gravity="center" />
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="Факт"
-                    android:textStyle="bold"
-                    android:gravity="center" />
-            </TableRow>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#A1409944"
+                    android:textColor="#FFFFFF"
+                    android:text="Создать наряд" />
 
-            <TableRow android:padding="8dp">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="001"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="5"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="3"
-                    android:gravity="center"
-                    android:textColor="#FF0000"/>
-            </TableRow>
+            </LinearLayout>
 
-            <TableRow android:padding="8dp">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="002"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="3"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="0"
-                    android:gravity="center"
-                    android:textColor="#FF0000"/>
-            </TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Нет наряда"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:textColor="#757575" />
 
-        </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#757575"
+                android:textColor="#FFFFFF"
+                android:text="На главную" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#2E7D32"
+                android:textColor="#FFFFFF"
+                android:text="Карта" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
+
 
 </ScrollView>
